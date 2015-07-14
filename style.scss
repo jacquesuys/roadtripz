@@ -1,47 +1,6 @@
 @import 'reset';
-
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-@mixin bp-large {
-  @media only screen and (min-width: 60em) {
-    @content;
-  }
-}
-
-@mixin bp-medium {
-  @media only screen and (min-width: 40em) {
-    @content;
-  }
-}
-
-@mixin bp-small {
-  @media only screen and (max-width: 30em) {
-    @content;
-  }
-}
-
-%clearfix {
-  *zoom: 1;
-  &:before, &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-%rounded {
-  border-radius: 5px;
-}
+@import 'mixins';
+@import 'vars';
 
 * {
   -webkit-box-sizing: border-box;
@@ -93,7 +52,7 @@ h1 {
 
 .dark-bg {
 	color: #fff;
-	background-color: #272727;
+	background-color: $dark;
 }
 
 .row {
@@ -158,5 +117,23 @@ button {
   &.facebook {
     background-color: #3B5A97;
     height: 65px;
-  }  
+  } 
+}
+
+button.secondary {
+  @extend button.white;
+
+  &.passw {
+    @include bp-medium-max {
+      color: $gray;
+    }
+  }
+
+  @include bp-medium {
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: #000;
+    float: left;
+    width: 50%;
+  }
 }

@@ -1,0 +1,71 @@
+@import 'reset';
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.dark-bg {
+	color: #fff;
+	background-color: #272727;
+}
+
+label {
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+}
+
+input {
+	width: 100%;
+	padding: 15px;
+}
+
+button {
+	color: #fff;
+	background-color: #F5A527;
+	outline: 0;
+	border: 0;
+	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+}
+
+button.facebook {
+	background-color: #3B5A97;
+}

@@ -11,13 +11,13 @@
 }
 
 @mixin bp-large {
-  @media only screen and (max-width: 60em) {
+  @media only screen and (min-width: 60em) {
     @content;
   }
 }
 
 @mixin bp-medium {
-  @media only screen and (max-width: 40em) {
+  @media only screen and (min-width: 40em) {
     @content;
   }
 }
@@ -39,33 +39,124 @@
   }
 }
 
+%rounded {
+  border-radius: 5px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-v-15 {
+  margin: 15px 0;
+}
+
+.desktop-only {
+  display: none;
+
+  @include bp-medium {
+    display: block;
+  }
+}
+
+.container {
+  &:after {
+     @extend %clearfix;
+  }
+}
+
 .dark-bg {
 	color: #fff;
 	background-color: #272727;
 }
 
+.row {
+  @extend %clearfix;
+}
+
+.m-6 {
+  float: left;
+  width: 100%;
+  padding: 1px;
+  
+  @include bp-medium {
+    width: 50%;
+  }
+
+  &:after {
+     @extend %clearfix;
+  }
+}
+
 label {
+  float: left;
 	text-transform: uppercase;
 	text-align: center;
 	width: 100%;
+  display: block;
+  padding: 15px 0;
 }
 
 input {
+  border: solid 0px transparent;
 	width: 100%;
 	padding: 15px;
+  text-align: center;
 }
 
 button {
-	color: #fff;
-	background-color: #F5A527;
+  color: #fff;
 	outline: 0;
 	border: 0;
 	text-transform: uppercase;
 	width: 100%;
 	text-align: center;
 	padding: 15px 0;
-}
+  // @extend %rounded;
 
-button.facebook {
-	background-color: #3B5A97;
+  @include bp-medium {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.white {
+    background: #fff;
+    color: #000;
+  }
+
+  &.yellow {
+    background-color: #F5A527;
+  }
+
+  &.facebook {
+    background-color: #3B5A97;
+    height: 65px;
+  }  
 }

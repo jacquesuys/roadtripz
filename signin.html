@@ -12,26 +12,33 @@
 
 <body>
 	<div class="container dark-bg p-15">
-		<h1><img src="img/logo-white.svg"></h1>
+
+		<h1 class="desktop-only">
+			<img src="img/logo-white.svg">
+		</h1>
+
 		<form method="" action="">
-			<button class="facebook">Signup with Facebook</button>
-			<p class="txt-center m-b-0"><em>Or with your email address</em></p>
-			<label>Name &amp; Surname</label>
+
+			<button class="facebook">Sign in with Facebook</button>
+
+			<p class="txt-center m-b-0"><em>Or with your email address or username</em></p>
+
 			<div class="row">
-				<div class="m-6">
-					<input type="text" placeholder="John">	
-				</div>
-				<div class="m-6">
-					<input type="text" placeholder="Doe">
-				</div>
+				<label>Email address</label>
+				<input type="text" placeholder="example@roadtripz.co">
 			</div>
-			<label>Username</label>
-			<input type="text" placeholder="Username">
-			<label>Email address</label>
-			<input type="text" placeholder="example@roadtripz.co">
-			<label>Password</label>
-			<input type="text" placeholder="Password">
-			<button class="m-v-15">Start your adventure</button>
+
+			<div class="row">
+				<label>Password</label>
+				<input type="text" placeholder="Password">
+			</div>
+
+			<button class="yellow m-t-15">Sign In</button>
+
+			<button class="white m-t-15">Forgot My Password</button>
+
+			<button class="white m-v-15">Create Account</button>
+
 		</form>
 	</div><!-- container -->
 </body>

@@ -1,0 +1,17 @@
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%rounded {
+  border-radius: 5px;
+}
+
+$dark: #272727;
+$gray: #9B9B9B;

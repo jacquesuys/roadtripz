@@ -3,34 +3,36 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title>Roadtripz - Sign Up</title>
+<title>Roadtripz - Forgot Password</title>
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css">
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 </head>
 
 <body>
-	<div class="container dark-bg p-15">
+	<div class="container p-15">
 
-		<h1 class="desktop-only">
-			<img src="img/logo-white.svg">
-		</h1>
+		<div class="modal dark-bg">
+			<h1 class="desktop-only">
+				<img src="img/logo-white.svg">
+			</h1>
 
-		<form method="" action="">
+			<form method="" action="">
+				<h1 class="txt-c">Forgot Password</h1>
 
-			<h1 class="txt-center">Forgot Password</h1>
+				<p class="m-b-0">Enter the email address associated with your account, and we will email you a link to reset your password!</p>
 
-			<p class="m-b-0">Enter the email address associated with your account, and we will email you a link to reset your password!</p>
+				<div class="row">
+					<label>Email address</label>
+					<input type="email" placeholder="example@roadtripz.co">
+				</div>
 
-			<div class="row">
-				<label>Email address</label>
-				<input type="text" placeholder="example@roadtripz.co">
-			</div>
+				<button class="yellow m-v-15">Send request link</button>
+			</form>
+		</div><!-- modal -->
 
-			<button class="yellow m-v-15">Send request link</button>
-
-		</form>
 	</div><!-- container -->
 </body>
 

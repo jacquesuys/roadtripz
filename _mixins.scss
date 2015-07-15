@@ -8,6 +8,14 @@
   font-size: calculateRem($size);
 }
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
 @mixin bp-large {
   @media only screen and (min-width: 60em) {
     @content;

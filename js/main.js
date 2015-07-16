@@ -1,10 +1,14 @@
 window.onload = function() {
-	var $header, $menuBtn;
+	var $overlay, $menuBtn, $toggle;
 
-	$header = document.querySelectorAll('header')[0],
+	$overlay = document.getElementById('overlay');
  	$menuBtn = document.querySelectorAll('.overflow')[0];
 
-	$menuBtn.addEventListener('click', function(){
-		document.body.classList.toggle('menu-open');
-	});
+ 	var $toggle = function() {
+ 		document.body.classList.toggle('menu-open');
+ 	};
+
+	$menuBtn.addEventListener('click', $toggle);
+
+	$overlay.addEventListener('click', $toggle);
 }

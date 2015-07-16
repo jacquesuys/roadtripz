@@ -58,6 +58,7 @@ header {
   z-index: 1000;
   width: 100%;
   background-color: #fff;
+  height: 50px;
 
   @include bp-medium {
     background-color: transparent;
@@ -68,8 +69,8 @@ header {
   }
 
   .logo {
-    width: 50%;
-    margin: 4px auto;
+    width: 160px;
+    margin: 10px auto;
 
     @include bp-medium {
       width: 250px;
@@ -87,13 +88,12 @@ header {
     cursor: pointer;
     width: 36px;
     position: absolute;
-    top: 15px;
+    top: 5px;
     left: 15px;
   }
 
   nav {
     font-weight: bold;
-    @include transition(margin 0.5s ease);
 
     @include bp-medium-max {
       position: fixed;
@@ -153,7 +153,8 @@ header {
 
 .menu-open {
   nav {
-    margin-left: 0;  
+    margin-left: 0;
+    @include transition(margin 0.5s ease);
   }
 
   #overlay {

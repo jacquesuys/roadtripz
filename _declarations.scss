@@ -1,0 +1,42 @@
+.txt-c {
+  text-align: center;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-h-15 {
+  padding: 0 15px;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-v-15 {
+  margin: 15px 0;
+}
+
+.mobile-only {
+  @include bp-medium {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include bp-medium {
+    display: block;
+  }
+}
+
+.dark-bg {
+  color: #fff;
+  background-color: $dark;
+}

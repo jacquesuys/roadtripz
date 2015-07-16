@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'mixins';
 @import 'vars';
+@import 'declarations';
 
 * {
   -webkit-box-sizing: border-box;
@@ -10,47 +11,16 @@
 
 body {
   @include font-size(16px);
+  background-color: $l-gray;
 }
 
 h1 {
   margin: 0;
 }
 
-.txt-c {
-  text-align: center;
-}
-
-.p-15 {
-  padding: 15px;
-}
-
-.m-b-0 {
-  margin-bottom: 0;
-}
-
-.m-t-15 {
-  margin-top: 15px;
-}
-
-.m-v-15 {
-  margin: 15px 0;
-}
-
-.mobile-only {
-  @include bp-medium {
-    display: none;
-  }
-}
-
-.desktop-only {
-  display: none;
-
-  @include bp-medium {
-    display: block;
-  }
-}
-
 .container {
+  height: 100%;
+
   @include bp-medium {
     max-width: 1400px;
     margin: 0 auto;
@@ -59,11 +29,6 @@ h1 {
   &:after {
      @extend %clearfix;
   }
-}
-
-.dark-bg {
-	color: #fff;
-	background-color: $dark;
 }
 
 .row {
@@ -94,6 +59,10 @@ header {
   width: 100%;
   background-color: #fff;
 
+  @include bp-medium {
+    background-color: transparent;
+  }
+
   .container {
     position: relative;
   }
@@ -102,6 +71,12 @@ header {
     width: 50%;
     margin: 4px auto;
 
+    @include bp-medium {
+      width: 250px;
+      margin: 15px;
+      float: left;
+    }
+
     a {
       display: block;
     }
@@ -109,7 +84,6 @@ header {
 
   .overflow {
     @extend .mobile-only;
-
     cursor: pointer;
     width: 36px;
     position: absolute;
@@ -118,15 +92,24 @@ header {
   }
 
   nav {
-    position: fixed;
-    background-color: white;
-    z-index: 1001;
-    width: 90%;
-    top: 49px;
-    left: 0;
-    height: 100%;
     font-weight: bold;
-    padding: 15px;
+
+    @include bp-medium-max {
+      position: fixed;
+      background-color: #fff;
+      z-index: 1001;
+      width: 90%;
+      top: 49px;
+      left: 0;
+      height: 100%;
+      font-weight: bold;
+      padding: 15px;
+    }
+
+    @include bp-medium {
+      float: right;
+      margin-top: 8px;
+    }
 
     button {
       &:first-child {
@@ -143,11 +126,24 @@ header {
         border-bottom: solid 1px $gray;
         line-height: 48px;
 
+        @include bp-medium {
+          float: left;
+          border: 0;
+        }
+
         a {
           color: #000;
           display: block;
-        }
+          @extend .p-h-15;
 
+          @include bp-medium {
+            color: #fff;
+
+            &:hover {
+              background-color: #000;
+            }
+          }
+        }
       }
     }
   }
@@ -233,8 +229,30 @@ button.secondary {
 
   @include bp-medium {
     // width = margin-left / -2
-    max-width: 40em;
+    max-width: 35em;
     left: 50%;
-    margin-left: -20em;
+    margin-left: -17.5em;
+  }
+}
+
+.home {
+  .intro {
+    height: 500px;
+    background-image: url(img/home-bg.jpg);
+    background-size: cover;
+
+    .search-bar {
+      @extend %vertical-align;
+      color: #fff;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+
+      form {
+        button {
+          background-color: $red;
+        }
+      }
+    }
   }
 }

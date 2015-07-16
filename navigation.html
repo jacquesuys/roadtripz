@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title>Roadtripz - Sign In</title>
+<title>Roadtripz - Navigation</title>
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="style.css">
 <!-- Latest compiled and minified JavaScript -->
@@ -11,7 +11,7 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 </head>
 
-<body>
+<body class="home">
 	<header>
 		<div class="container">
 			<div class="logo">
@@ -25,11 +25,14 @@
 				<img src="img/overflow-h.svg" title="menu">	
 			</div>
 
-			<nav style="margin-left: -100%;">
-				<button class="facebook">Sign in with Facebook</button>
-				<button class="yellow">Create Account</button>
+			<nav>
+				<button class="facebook mobile-only">Sign in with Facebook</button>
+				<button class="yellow mobile-only">Create Account</button>
 
 				<ul>
+					<li class="desktop-only">
+						<a href="#" title="Sign Up">Sign Up</a>
+					</li>
 					<li>
 						<a href="#" title="Sign In">Sign In</a>
 					</li>
@@ -43,40 +46,19 @@
 			</nav>
 		</div>	
 	</header>
-
-	<div class="container">
-
-		<div class="modal dark-bg">
-			<h1 class="desktop-only">
-				<img src="img/logo-white.svg" title="Roadtripz">
-			</h1>
-
-			<form method="" action="">
-
-				<button class="facebook">Sign in with Facebook</button>
-
-				<p class="txt-c m-b-0"><em>Or with your email address or username</em></p>
-
-				<div class="row">
-					<label>Email address</label>
-					<input type="email" placeholder="example@roadtripz.co">
-				</div>
-
-				<div class="row">
-					<label>Password</label>
-					<input type="password" placeholder="Password">
-				</div>
-
-				<button class="yellow m-t-15">Sign In</button>
-
-				<button class="secondary passw m-t-15">Forgot My Password</button>
-
-				<button class="secondary m-v-15">Create Account</button>
-
-			</form>
-		</div><!--modal -->
-
-	</div><!-- container -->
+	<div class="intro">
+		<div class="container">
+			<div class="search-bar">
+				<h1>Start your adventure!</h1>
+				<form method="" action="">
+					<input type="text">
+					<button>Begin</button>
+				</form>
+				<p>or</p>
+				<button class="yellow">Browse Trips</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html> 

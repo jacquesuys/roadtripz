@@ -93,8 +93,12 @@ header {
 
   nav {
     font-weight: bold;
+    
 
     @include bp-medium-max {
+      // please remove
+      display: none;
+      //
       position: fixed;
       background-color: #fff;
       z-index: 1001;
@@ -186,6 +190,10 @@ button {
     color: #000;
   }
 
+  &.red {
+    background-color: $red;
+  }
+
   &.yellow {
     background-color: #F5A527;
   }
@@ -235,7 +243,10 @@ button.secondary {
   }
 }
 
+// Templates
+
 .home {
+
   .intro {
     height: 500px;
     background-image: url(img/home-bg.jpg);
@@ -245,12 +256,34 @@ button.secondary {
       @extend %vertical-align;
       color: #fff;
       text-align: center;
-      width: 50%;
+      max-width: 1500px;
+      width: 70%;
       margin: 0 auto;
+        
+      input {
+        margin: 15px 0;
+      }
 
-      form {
+      @include bp-medium {
+
+        input, button {
+          float: left;
+        }
+
+        input { 
+          width: 75%;
+        }
+
         button {
-          background-color: $red;
+          &.red {
+            width: 25%;
+            margin: 15px 0;
+          }
+
+          &.yellow {
+            width: 40%;
+            margin: 0 30%;
+          }
         }
       }
     }

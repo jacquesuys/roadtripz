@@ -1,0 +1,82 @@
+// Home
+.home {
+
+  .intro {
+    height: 500px;
+    background-image: url(img/home-bg.jpg);
+    background-size: cover;
+
+    .search-bar {
+      @extend %vertical-align;
+      color: #fff;
+      text-align: center;
+      max-width: 1500px;
+      width: 70%;
+      margin: 0 auto;
+        
+      input {
+        margin: 15px 0;
+      }
+
+      form {
+        @extend %clearfix;
+        position: relative;
+      }
+
+      .autocomplete {
+        position: absolute;
+        top: 63px;
+        width: 100%;
+        background-color: #fff;
+        display: none;
+
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+
+          li {
+            border-bottom: solid 1px $l-gray;
+
+            a {
+              line-height: 2.5em;
+              display: block;
+
+              &:hover {
+                background-color: #fcfcfc;
+              }
+            }
+          }
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+
+      @include bp-medium {
+
+        input, button {
+          float: left;
+        }
+
+        .autocomplete,
+        input { 
+          width: 75%;
+        }
+
+        button {
+          &.red {
+            width: 25%;
+            margin: 15px 0;
+          }
+
+          &.yellow {
+            width: 40%;
+            margin: 0 30%;
+          }
+        }
+      }
+    }
+  }
+}

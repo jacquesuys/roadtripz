@@ -50,6 +50,16 @@
 				<h1>Start your adventure!</h1>
 				<form method="" action="">
 					<input type="text" placeholder="Start Location" name="search">
+					<div class="autocomplete">
+						<ul>
+							<li>
+								<a href="#">Zurich, Switzerland</a>
+							</li>
+							<li>
+								<a href="#">Cape Town, South Africa</a>
+							</li>
+						</ul>
+					</div>
 					<button class="red">Begin</button>
 				</form>
 				<p>or</p>
@@ -58,7 +68,32 @@
 		</div>
 	</div>
 	<div id="overlay"></div>
-	<script src="js/main.js"></script>		
+	<script src="js/main.js"></script>
+	<script>
+		window.onload = function() {
+			var $input = document.querySelectorAll('.search-bar input')[0],
+				$auto = document.querySelectorAll('.autocomplete')[0],
+				$places = $auto.getElementsByTagName('a');
+
+			$input.addEventListener('keyup', function() {
+				if($input.value.length > 2) {
+					$auto.className += ' active';
+				} else {
+					$auto.className = 'autocomplete';
+				}
+			});
+
+			for(var i = 0; i < $places.length; i++) {
+
+				$places[i].addEventListener('click', function(e){
+					e.preventDefault();
+					var $val = this.innerHTML;
+					$input.value = $val;
+					$auto.className = 'autocomplete';
+				});
+			}
+		};
+	</script>			
 </body>
 
 </html> 

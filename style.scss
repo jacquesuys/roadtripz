@@ -163,6 +163,11 @@ header {
   }
 }
 
+form p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 label {
   float: left;
 	text-transform: uppercase;
@@ -265,48 +270,4 @@ button.secondary {
   display: none;
 }
 
-// Templates
-.home {
-
-  .intro {
-    height: 500px;
-    background-image: url(img/home-bg.jpg);
-    background-size: cover;
-
-    .search-bar {
-      @extend %vertical-align;
-      color: #fff;
-      text-align: center;
-      max-width: 1500px;
-      width: 70%;
-      margin: 0 auto;
-        
-      input {
-        margin: 15px 0;
-      }
-
-      @include bp-medium {
-
-        input, button {
-          float: left;
-        }
-
-        input { 
-          width: 75%;
-        }
-
-        button {
-          &.red {
-            width: 25%;
-            margin: 15px 0;
-          }
-
-          &.yellow {
-            width: 40%;
-            margin: 0 30%;
-          }
-        }
-      }
-    }
-  }
-}
+@import 'templates';

@@ -36,8 +36,7 @@ h1 {
 }
 
 .m-6 {
-  float: left;
-  width: 100%;
+  @extend %row;
   padding: 1px;
   
   @include bp-medium {
@@ -201,10 +200,9 @@ form p a {
 }
 
 label {
-  float: left;
+  @extend %row;
 	text-transform: uppercase;
 	text-align: center;
-	width: 100%;
   display: block;
   padding: 15px 0;
 }

@@ -114,9 +114,8 @@
     }
 
     .top-bar {
+      @extend %row;
       margin-top: $menu-h;
-      float: left;
-      width: 100%;
       background-color: #fff;
       height: 50px;
       border-bottom: solid 1px $border;
@@ -142,10 +141,9 @@
     .point {
       @extend %clearfix;
       @extend .p-v-15;
+      @extend %row;
       background-color: #fff;
       border-bottom: solid 1px $border;
-      float: left;
-      width: 100%;
 
       > div {
         float: left;
@@ -154,12 +152,13 @@
       .nights {
         width: 25%;
         text-align: center;
+        padding: 10px 0;
 
         strong {
           color: $yellow;
           display: block;
           font-weight: bold;
-          font-size: 3.5em;
+          font-size: 2.5em;
           line-height: 0.75em;
           margin-bottom: 10px;
         }
@@ -201,10 +200,69 @@
       }
     }
 
+    .message {
+      @extend %clearfix;
+      @extend %row;
+      padding: 10px 10px 0;
+
+      > div {
+        float: left;
+      }
+
+      &.active > div {
+        float: right;
+
+        &.bubble {
+          padding: 10px 10px 10px 0;
+
+          div:first-child {
+            text-align: right;
+          }
+
+          .txt {
+            background-color: $yellow;
+            color: #fff;
+          }
+        }
+      }
+
+      .profile {
+        width: 20%;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .bubble {
+        width: 80%;
+        padding: 10px 0 10px 10px;
+
+        > div {
+          @extend %row;
+        }
+
+        div:first-child {
+          margin-top: -10px;
+          color: $border;
+          @include font-size(12px);
+        }
+
+        .txt {
+          @extend %rounded;
+          @include font-size(14px);
+          background-color: #fff;
+          padding: 10px;
+          margin-top: 5px;
+          line-height: 1.4em;
+        }
+      }
+    }
+
     .bottom-bar {
       @extend %clearfix;
-      width: 100%;
-      float: left;
+      @extend %row;
       background-color: #fff;
       position: fixed;
       bottom: 0;

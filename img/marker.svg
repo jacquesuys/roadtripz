@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 67 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(3,0,0,3,-69.9776,-1539.42)">
+        <g id="Layer1">
+            <clipPath id="_clip1">
+                <path d="M34.483,513.212C28.399,513.212 23.467,518.141 23.467,524.22C23.467,524.35 23.471,524.483 23.477,524.617C23.518,525.773 23.736,526.884 24.107,527.923C26.458,535.642 34.483,545.712 34.483,545.712C34.483,545.712 42.508,535.643 44.859,527.924C45.231,526.885 45.449,525.773 45.49,524.617C45.496,524.483 45.5,524.351 45.5,524.22C45.5,518.141 40.568,513.212 34.483,513.212ZM34.483,529.611C31.504,529.611 29.088,527.197 29.088,524.22C29.088,521.243 31.504,518.829 34.483,518.829C37.463,518.829 39.879,521.243 39.879,524.22C39.879,527.197 37.463,529.611 34.483,529.611Z"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <rect x="18.467" y="508.212" width="32.033" height="42.5" style="fill:black;fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>

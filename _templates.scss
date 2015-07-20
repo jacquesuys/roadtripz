@@ -1,6 +1,24 @@
 // Home
 .home {
 
+  header {
+    @include bp-medium {
+      background-color: transparent;
+    }
+
+    nav ul li a {
+      color: #000;
+
+      @include bp-medium {
+        color: #fff;
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+  }
+
   .intro {
     height: 500px;
     background-image: url(img/home-bg.jpg);
@@ -76,6 +94,101 @@
             margin: 0 30%;
           }
         }
+      }
+    }
+  }
+}
+
+.trip {
+  aside {
+    @extend %clearfix;
+    overflow-y: scroll;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    @include bp-medium {
+      width: 400px;
+      border-right: solid 1px $border;
+    }
+
+    .bar {
+      margin-top: $menu-h;
+      float: left;
+      width: 100%;
+      background-color: #fff;
+      height: 50px;
+      border-bottom: solid 1px $border;
+
+      a {
+        float: left;
+        display: block;
+        text-align: center;
+        line-height: 3em;
+
+        &:first-child {
+          width: 30%;
+        }
+
+        &:nth-child(2) {
+          width: 70%;
+        }
+      }
+    }
+
+    .point {
+      @extend %clearfix;
+      @extend .p-v-15;
+      background-color: #fff;
+      border-bottom: solid 1px $border;
+      float: left;
+      width: 100%;
+
+      > div {
+        float: left;
+      }
+
+      .nights {
+        width: 25%;
+        text-align: center;
+
+        strong {
+          color: $yellow;
+          display: block;
+          font-weight: bold;
+          font-size: 3.5em;
+          line-height: 0.75em;
+          margin-bottom: 10px;
+        }
+
+        span {
+          font-size: 1em;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+
+      .desc {
+        width: 62.5%;
+
+        div {
+          color: $red;
+        }
+
+        h2 {
+          line-height: 1.5em;
+          margin: 0;
+        }
+
+        span {
+          color: $gray;
+        }
+      }
+
+      .status {
+        width: 12.5%;
+        text-align: center;
+        line-height: 4em;
       }
     }
   }

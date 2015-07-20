@@ -8,13 +8,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home">
+<body class="trip">
 	<header>
 		<div class="container">
 			<div class="logo">
 				<a href="#" title="Roadtripz">
-					<img src="img/logo-black.svg" title="Roadtripz" class="mobile-only">
-					<img src="img/logo-white.svg" title="Roadtripz" class="desktop-only">
+					<img src="img/logo-black.svg" title="Roadtripz">
 				</a>
 			</div>
 
@@ -49,29 +48,47 @@
 
 		</div>	
 	</header>
-	<div class="intro">
-		<div class="container">
-			<div class="search-bar">
-				<h1>Start your adventure!</h1>
-				<form method="" action="">
-					<input type="text" placeholder="Start Location" name="search">
-					<div class="autocomplete">
-						<ul>
-							<li>
-								<a href="#">Zurich, Switzerland</a>
-							</li>
-							<li>
-								<a href="#">Cape Town, South Africa</a>
-							</li>
-						</ul>
-					</div>
-					<button class="red">Begin</button>
-				</form>
-				<p>or</p>
-				<button class="yellow">Browse Trips</button>
+
+	<aside>
+		<div class="bar">
+			<a href="#" class="mobile-only">Map</a>
+			<a href="#">
+				<em>Your Trip!</em>
+			</a>
+		</div>
+
+		<div class="point">
+			<div class="nights">
+				<strong>2</strong>
+				<span>Nights</span>
+			</div>
+			<div class="desc">
+				<div>Once</div>
+				<h2>Cape Town</h2>
+				<span>View Booking</span>
+			</div>
+			<div class="status">
+				<i>lert</i>
 			</div>
 		</div>
-	</div>
+
+		<div class="point">
+			<div class="nights">
+				<strong>2</strong>
+				<span>Nights</span>
+			</div>
+			<div class="desc">
+				<div>Once</div>
+				<h2>Cape Town</h2>
+				<span>View Booking</span>
+			</div>
+			<div class="status">
+				<i>lert</i>
+			</div>
+		</div>
+
+	</aside>
+
 	<div id="overlay">
 		<div class="modal dark-bg">
 			<a href="#" class="close">Close</a>
@@ -79,9 +96,7 @@
 		</div><!--modal -->
 	</div><!-- overlay -->
 	
-
-	<script src="js/main.js"></script>
-	<script src="js/home.js"></script>			
+	<script src="js/main.js"></script>		
 </body>
 
 </html> 

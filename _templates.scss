@@ -200,8 +200,7 @@
       }
     }
 
-    .card,
-    .message {
+    .card {
       @extend %clearfix;
       @extend %row;
       padding: 10px 10px 0;
@@ -255,7 +254,17 @@
       }
     }
 
+    .facepile {
+      > div {
+        background-color: transparent;
+        padding-bottom: 0;
+      }
+    }
+
     .message {
+      > div {
+        background-color: transparent; 
+      }
 
       &.active > div {
         float: right;

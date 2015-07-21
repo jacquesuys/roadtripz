@@ -239,6 +239,10 @@ button {
     background-color: $red;
   }
 
+  &.d-red {
+   background-color: $d-red; 
+  }
+
   &.yellow {
     background-color: #F5A527;
   }

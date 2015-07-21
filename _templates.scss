@@ -200,6 +200,7 @@
       }
     }
 
+    .card,
     .message {
       @extend %clearfix;
       @extend %row;
@@ -208,6 +209,53 @@
       > div {
         float: left;
       }
+
+      .profile {
+        width: 20%;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .txt {
+        @extend %rounded;
+        @include font-size(14px);
+        padding: 10px;
+        line-height: 1.4em;
+      }
+    }
+
+    .card {
+
+      > div {
+        padding: 8px;
+        background-color: #fff;
+        @extend %row;
+
+        > div {
+          float: left;
+        }
+      }
+
+      .txt {
+        width: 80%;
+        padding-top: 0;
+
+        p {
+          margin: 0;
+          font-weight: bold;
+        }
+
+        a,
+        span {
+          color: $border;
+        }
+      }
+    }
+
+    .message {
 
       &.active > div {
         float: right;
@@ -226,15 +274,6 @@
         }
       }
 
-      .profile {
-        width: 20%;
-        text-align: center;
-
-        img {
-          max-width: 100%;
-        }
-      }
-
       .bubble {
         width: 80%;
         padding: 10px 0 10px 10px;
@@ -250,12 +289,8 @@
         }
 
         .txt {
-          @extend %rounded;
-          @include font-size(14px);
           background-color: #fff;
-          padding: 10px;
           margin-top: 5px;
-          line-height: 1.4em;
         }
       }
     }
@@ -321,6 +356,7 @@
             height: 48px;
             padding: 10px;
 
+            &:hover,
             &.active {
               border-top: solid 4px $d-red;
               padding: 6px 10px 10px;
